@@ -1,6 +1,4 @@
 # PROJETO ÁGAPE — AUTISMO GRAU 3, SISTEMA DUAL DE PULSEIRAS E ROTINA
-> **Trabalho Acadêmico de Conclusão / Disciplina:** Programação Web III (PWIII)  
-> **Status:** Landing Page Desenvolvida Localmente (Pronta para publicação manual futura)
 
 ---
 
