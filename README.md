@@ -120,5 +120,5 @@ Há também outras situações em que essa pulseira seria útil, por exemplo em 
 
 ```text
 Landing Page:
-https://USUARIO.github.io/
+https://agape-tcc.github.io/TCC_Agape/
 ```
