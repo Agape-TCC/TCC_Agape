@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Projeto Ágape — Autismo Grau 3, Sistema Dual de Pulseiras e Rotina (PWIII)</title>
+  
+  <meta name="description" content="Projeto Ágape: Solução assistiva composta por duas pulseiras inteligentes (filho e mãe/responsável) com monitoramento cardíaco, alerta visual em 4 cores (LED RGB) e sonoro (buzzer), e aplicativo/site para organização da rotina de famílias de pessoas autistas de grau 3.">
+  <meta name="keywords" content="Projeto Ágape, Autismo Grau 3, TEA, Sistemas Embarcados, Duas Pulseiras, LED RGB, Buzzer, Sensor Cardíaco, Cuidadores, Familiares, Home Office">
+  <meta name="author" content="Equipe Projeto Ágape - PWIII">
+  
+  <!-- link rel="icon" type="image/jpg" href="img/logo.jpg" -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header" id="mainHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-wrapper" aria-label="Ir para o topo - Projeto Ágape">
+        <!-- img src="img/logo.png" alt="Logotipo do Projeto Ágape com laço símbolo do TEA em quebra-cabeça" class="brand-logo" -->
+        <div class="brand-info">
+          <span class="brand-name">Projeto Ágape</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#problema" class="nav-link">Problema</a></li>
+          <li><a href="#solucao" class="nav-link">Solução</a></li>
+          <li><a href="#simulador" class="nav-link">Simulador</a></li>
+          <li><a href="#publico" class="nav-link">Público-Alvo</a></li>
+          <li><a href="#funcionalidades" class="nav-link">Funcionalidades</a></li>
+          <li><a href="#equipe" class="nav-link">Equipe</a></li>
+          <li><a href="#tecnologias" class="nav-link">Tecnologias</a></li>
+          <li><a href="#contato" class="btn btn-primary nav-cta" data-open-modal="contact">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger-icon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-group">
+            <span class="badge-tag">Apoio ao Autismo Grau 3</span>
+            <span class="badge-tag badge-purple">2 Pulseiras Inteligentes + App/Site</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Segurança, rotina e qualidade de vida para famílias no <span class="gradient-text">Autismo Grau 3</span>
+          </h1>
+          
+          <p class="hero-slogan">
+            Monitoramento cardíaco em duas pulseiras inteligentes com alertas por LED RGB e Buzzer, aliado a um aplicativo para organizar o cuidado diário.
+          </p>
+          
+          <p class="hero-description">
+            O <strong>Projeto Ágape</strong> desenvolveu um ecossistema com <strong>duas pulseiras inteligentes</strong> (para o filho autista e para o responsável) e um <strong>aplicativo/site</strong> de rotina. A iniciativa acolhe cuidadores e familiares, diminuindo a preocupação constante e promovendo tranquilidade no trabalho em home office, em casa e na rua.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#sobre" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+              Conheça o Projeto
+            </a>
+            <a href="#simulador" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Simular 2 Pulseiras
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">2 Pulseiras</span>
+              <span class="stat-label">Filho (BPM) + Responsável</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">4 Níveis</span>
+              <span class="stat-label">LED RGB + Alerta Buzzer</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">Grau 3</span>
+              <span class="stat-label">Foco em Cuidados Constantes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-floating-element floating-top-left">
+            <span style="font-size: 1.5rem;" aria-hidden="true">💙</span>
+            <div>
+              <strong style="font-size: 0.85rem; display:block; color: var(--primary-dark);">Pulseira do Filho</strong>
+              <small style="color: var(--text-muted);">Sensor BPM + LED Azul</small>
+            </div>
+          </div>
+
+          <div class="hero-card-preview">
+            <div class="preview-header">
+              <div class="preview-tag">
+                <span class="pulse-dot"></span>
+                <span>Sistema Dual Conectado</span>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Hardware Ágape</span>
+            </div>
+
+            <div class="preview-image-box">
+              <img src="img/pulseira.png" alt="Protótipo do sistema de pulseiras inteligentes do Projeto Ágape" class="preview-bracelet-img">
+            </div>
+
+            <div class="preview-body">
+              <div class="preview-metric-row">
+                <span class="metric-title">Frequência Cardíaca (Filho)</span>
+                <span class="metric-val">
+                  <span id="heroBpmVal">72</span> <small style="font-size: 0.8rem; font-weight: 500;">BPM</small>
+                </span>
+              </div>
+              <div class="preview-metric-row">
+                <span class="metric-title">Alerta na Mãe (LED RGB)</span>
+                <span style="color: var(--accent-green); font-weight: 700; font-size: 0.9rem;">🟢 Verde (Estável)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-floating-element floating-bottom-right">
+            <span style="font-size: 1.5rem;" aria-hidden="true">🔔</span>
+            <div>
+              <strong style="font-size: 0.85rem; display:block; color: var(--primary-dark);">Pulseira da Mãe</strong>
+              <small style="color: var(--text-muted);">LED RGB + Buzzer Sonoro</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag">Contexto & Proposta</span>
+          <h2 class="section-title">Sobre o Projeto Ágape</h2>
+          <p class="section-subtitle">
+            Desenvolvido a partir de pesquisas e entrevistas com famílias atípicas para enfrentar a sobrecarga dos cuidadores e proporcionar mais segurança no cuidado diário.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual-group">
+            <div class="about-main-card">
+              <img src="img/autismo.png" alt="Arte com blocos de quebra-cabeça coloridos formando a palavra Autismo" class="autismo-banner-img">
+              
+              <div class="about-highlights-list">
+                <div class="about-highlight-item">
+                  <div class="highlight-icon-box" aria-hidden="true">⌚</div>
+                  <div>
+                    <h3 class="highlight-title">Sistema de Duas Pulseiras</h3>
+                    <p class="highlight-desc">Uma pulseira para o filho autista (sensor cardíaco e LED azul) e outra para a mãe/responsável (LED RGB 4 cores e buzzer sonoro).</p>
+                  </div>
+                </div>
+
+                <div class="about-highlight-item">
+                  <div class="highlight-icon-box" style="background-color: #fee2e2; color: var(--accent-red);" aria-hidden="true">⏱️</div>
+                  <div>
+                    <h3 class="highlight-title">Alerta Gradual em 4 Estágios</h3>
+                    <p class="highlight-desc">O LED RGB sinaliza verde (estável), amarelo (atenção), roxo (aceleração com LED azul do filho) e vermelho (buzzer sonoro da mãe).</p>
+                  </div>
+                </div>
+
+                <div class="about-highlight-item">
+                  <div class="highlight-icon-box" style="background-color: #f3e8ff; color: var(--accent-purple);" aria-hidden="true">📝</div>
+                  <div>
+                    <h3 class="highlight-title">Aplicativo/Site de Rotina</h3>
+                    <p class="highlight-desc">Auxilia na organização diária, permitindo registrar comportamentos, informações importantes e compromissos de saúde.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-content">
+            <h3 style="font-family: var(--font-heading); font-size: 1.85rem; color: var(--primary-dark); margin-bottom: 1.25rem;">
+              Cuidado personalizado onde cada segundo faz a diferença
+            </h3>
+            
+            <p>
+              O <strong>projeto ÁGAPE</strong> tem como objetivo auxiliar famílias de pessoas autistas de grau 3, que necessitam de cuidados constantes. Durante as pesquisas e entrevistas, identificamos como principais problemas a sobrecarga dos cuidadores, a falta de apoio e as dificuldades de organização, fatores que podem prejudicar sua saúde mental.
+            </p>
+            
+            <p>
+              Como solução, desenvolvemos a proposta de um aplicativo/site e duas pulseiras inteligentes. As pulseiras utilizam sensores para monitorar os batimentos cardíacos e emitir alertas ao responsável quando forem identificadas alterações. O aplicativo/site auxilia na organização da rotina, permitindo registrar comportamentos, informações e compromissos relacionados ao cuidado. Assim, o projeto busca proporcionar mais segurança, organização e tranquilidade aos cuidadores.
+            </p>
+
+            <div class="about-pillars-grid">
+              <div class="pillar-card">
+                <h4 class="pillar-title">Objetivo Geral</h4>
+                <p class="pillar-text">Auxiliar famílias de pessoas autistas de grau 3, contribuindo para a segurança, organização e qualidade de vida dos cuidadores.</p>
+              </div>
+              <div class="pillar-card purple">
+                <h4 class="pillar-title">Objetivos Específicos</h4>
+                <p class="pillar-text">Desenvolver o sistema de duas pulseiras (BPM e alertas ao responsável) e o app/site de rotina, comportamentos e compromissos.</p>
+              </div>
+              <div class="pillar-card red">
+                <h4 class="pillar-title">Metodologia Científica</h4>
+                <p class="pillar-text">Pesquisas e entrevistas de campo com mães e familiares para mapear as dores reais e projetar sistemas embarcados sob medida.</p>
+              </div>
+              <div class="pillar-card yellow">
+                <h4 class="pillar-title">Resultados Esperados</h4>
+                <p class="pillar-text">Redução da preocupação constante dos cuidadores, detecção ágil de desconfortos e rotina estruturada no aplicativo/site.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study-quote-box">
+          <span class="case-study-badge">Em que esse dispositivo ajudaria? — Relato Real das Entrevistas</span>
+          <h4 class="case-study-title">A Realidade de uma Mãe Solo em Home-Office com Filho Autista Grau 3</h4>
+          <p class="case-study-text">
+            "Em uma de nossas entrevistas com uma mãe que possui um filho autista grau 3 totalmente dependente até mesmo para tarefas básicas como ir ao banheiro ou segurar uma colher para comer, ela relatou que a constante presença dela era necessária para cuidar do filho. Sendo mãe solo, cuidando sozinha sem um pai, a dificuldade para suprir todas as necessidades é ainda maior. Por esse fato, a renda da família acaba não sendo suficiente, recebendo auxílio governamental, já que trabalhar presencialmente é quase impossível por não ter com quem deixar a criança.<br><br>
+            Felizmente, ela conseguiu um emprego em <strong>home-office</strong> pelo computador, aumentando a renda familiar. Entretanto, há momentos em que ela não pode estar o tempo todo junto ao filho, pois precisa participar de reuniões que exigem silêncio e concentração. Ela relatou que, mesmo estando a poucos cômodos de distância dentro de casa, não conseguia manter o foco no trabalho, pois precisava checar a todo momento se o filho estava bem.<br><br>
+            <strong>É aqui que a pulseira Ágape faz toda a diferença:</strong> com o auxílio do sistema alertando quando o filho apresentar batimentos cardíacos alterados ou desconforto, a mãe consegue concentrar-se no trabalho e melhorar sua saúde mental, diminuindo a ansiedade e a preocupação constante. Além disso, o dispositivo é indispensável para monitorar a estabilidade da criança ao caminhar na rua ou em ambientes povoados."
+          </p>
+          <span class="case-study-author">— Pesquisa qualitativa realizada pela equipe do Projeto Ágape (PWIII)</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="problema">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag" style="background-color: #fee2e2; color: var(--accent-red); border-color: rgba(230, 57, 70, 0.25);">Desafios Reais</span>
+          <h2 class="section-title">O Problema que Enfrentamos</h2>
+          <p class="section-subtitle">
+            A sobrecarga dos cuidadores, a dependência severa no autismo grau 3 e a falta de apoio comprometem a saúde mental das famílias.
+          </p>
+        </div>
+
+        <div class="problem-grid">
+          <article class="problem-card">
+            <div class="problem-icon-wrapper" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 class="problem-title">Dependência Total no Grau 3</h3>
+            <p class="problem-description">
+              Pessoas autistas de grau 3 necessitam de apoio substancial e contínuo para tarefas essenciais, exigindo vigilância ininterrupta e presença constante do cuidador.
+            </p>
+          </article>
+
+          <article class="problem-card">
+            <div class="problem-icon-wrapper" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><line x1="9" y1="10" x2="15" y2="10"></line></svg>
+            </div>
+            <h3 class="problem-title">Sobrecarga e Saúde Mental de Mães Solo</h3>
+            <p class="problem-description">
+              Mães que cuidam sozinhas enfrentam esgotamento psicológico e ansiedade crônica. Mesmo em home-office, reuniões de trabalho exigem foco que é interrompido pelo medo constante de não saber se o filho está em desconforto no outro cômodo.
+            </p>
+          </article>
+
+          <article class="problem-card">
+            <div class="problem-icon-wrapper" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3 class="problem-title">Falta de Apoio e Desorganização da Rotina</h3>
+            <p class="problem-description">
+              A carência de ferramentas para anotar comportamentos diários, gerenciar compromissos e acompanhar variações fisiológicas gera desarticulação no cuidado e acentua a sensação de isolamento familiar.
+            </p>
+          </article>
+        </div>
+
+        <div class="problem-context-box">
+          <div style="font-size: 3rem; flex-shrink: 0;" aria-hidden="true">💡</div>
+          <div class="problem-context-text">
+            <h4>Em qual contexto esse problema acontece diariamente?</h4>
+            <p>
+              Ocorre no dia a dia doméstico (onde pais precisam trabalhar em home-office sem poder vigiar visualmente a criança a cada segundo), em passeios na rua ou ambientes povoados (onde estímulos causam taquicardia) e no gerenciamento de consultas médicas e terapias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solucao">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag badge-green">Engenharia & Cuidado</span>
+          <h2 class="section-title">Nossa Solução Integrada</h2>
+          <p class="section-subtitle">
+            Um ecossistema composto por duas pulseiras inteligentes com sistemas embarcados e um aplicativo/site para organização do cuidado.
+          </p>
+        </div>
+
+        <div class="solution-flow-grid">
+          <div class="flow-step-card">
+            <span class="step-number">1</span>
+            <h3 class="step-title">Pulseira 1: Filho Autista</h3>
+            <p class="step-text">
+              Utiliza sistemas embarcados, <strong>sensor de batimentos cardíacos</strong> e <strong>LED Azul</strong>. Fica no pulso da criança, confortável e sem fios invasivos.
+            </p>
+          </div>
+
+          <div class="flow-step-card">
+            <span class="step-number">2</span>
+            <h3 class="step-title">Pulseira 2: Responsável</h3>
+            <p class="step-text">
+              Utilizada pela mãe/pai. Possui <strong>LED RGB de 4 cores</strong> e <strong>Buzzer sonoro</strong>, emitindo alertas imediatos à distância dentro de casa ou na rua.
+            </p>
+          </div>
+
+          <div class="flow-step-card">
+            <span class="step-number">3</span>
+            <h3 class="step-title">Lógica de 4 Estágios</h3>
+            <p class="step-text">
+              <strong>Verde:</strong> estável. <strong>Amarelo:</strong> atenção. <strong>Roxo:</strong> acelerado (acende LED azul do filho). <strong>Vermelho:</strong> buzzer da mãe apita para intervenção.
+            </p>
+          </div>
+
+          <div class="flow-step-card">
+            <span class="step-number">4</span>
+            <h3 class="step-title">Aplicativo/Site de Rotina</h3>
+            <p class="step-text">
+              Facilita a organização familiar, possibilitando registrar comportamentos, histórico de alterações, informações de saúde e compromissos terapêuticos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="simulador" style="padding-top: 0;">
+      <div class="container">
+        <div class="simulator-wrapper">
+          <div class="simulator-header">
+            <span class="badge-tag" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3);">
+              Demonstração do Sistema Dual
+            </span>
+            <h3 class="simulator-title">Simulador das Duas Pulseiras Inteligentes Ágape</h3>
+            <p class="simulator-subtitle">
+              Experimente a comunicação entre a pulseira do filho autista (sensor BPM + LED azul) e a pulseira da mãe/responsável (LED RGB 4 cores + Buzzer sonoro).
+            </p>
+          </div>
+
+          <div class="simulator-dashboard">
+            <div class="sim-dual-container">
+              <div class="sim-hardware-card">
+                <span class="sim-hardware-badge badge-child">Pulseira 1: Filho (Autista Grau 3)</span>
+                
+                <div class="sim-heart-display">
+                  <span class="sim-heart-icon" id="simHeartIcon" aria-hidden="true">❤️</span>
+                  <div>
+                    <span class="sim-bpm-val" id="simBpmValue">72</span>
+                    <span class="sim-bpm-unit">BPM</span>
+                  </div>
+                </div>
+
+                <div class="sim-status-pill" id="simStatusPill">
+                  🟢 Batimentos Estáveis
+                </div>
+
+                <div class="hardware-elements-row">
+                  <div class="led-unit">
+                    <span class="led-bulb led-blue off" id="ledBlueChild" title="LED Azul do Filho"></span>
+                    <span class="led-label">LED Azul (Filho)</span>
+                  </div>
+                  <div style="font-size: 0.8rem; color: #94a3b8; text-align: left;">
+                    <strong style="color: #e2e8f0; display:block;">Sensor Cardíaco</strong>
+                    Acende o LED Azul a partir da cor Roxa
+                  </div>
+                </div>
+              </div>
+
+              <div class="sim-hardware-card">
+                <span class="sim-hardware-badge badge-mother">Pulseira 2: Mãe / Cuidador</span>
+                
+                <div style="margin-bottom: 0.75rem;">
+                  <strong style="font-size: 1.1rem; color: #ffffff; display: block; margin-bottom: 0.25rem;">
+                    Receptor de Alerta Remoto
+                  </strong>
+                  <span id="rgbColorLabel" style="font-size: 0.9rem; color: #34d399; font-weight: 700;">
+                    LED RGB: Verde (Normal)
+                  </span>
+                </div>
+
+                <div class="hardware-elements-row" style="margin-bottom: 1.25rem;">
+                  <div class="led-unit">
+                    <span class="led-bulb led-rgb green" id="ledRgbMother" title="LED RGB da Mãe (4 Cores)"></span>
+                    <span class="led-label">LED RGB (4 Cores)</span>
+                  </div>
+
+                  <div class="buzzer-box" id="buzzerMother">
+                    <span aria-hidden="true">🔔</span>
+                    <span id="buzzerStatusText">Buzzer: Silencioso</span>
+                  </div>
+                </div>
+
+                <p style="font-size: 0.8rem; color: #94a3b8; margin: 0; line-height: 1.45;">
+                  Permite à mãe manter reuniões de home-office em silêncio ou realizar tarefas domésticas sem precisar checar o filho a todo instante.
+                </p>
+              </div>
+            </div>
+
+            <div class="sim-controls-panel">
+              <strong style="color: #ffffff; font-size: 1rem;">Selecione o Estágio Fisiológico para Simular:</strong>
+              
+              <div class="sim-btn-group">
+                <button type="button" class="btn-sim active" data-stage="verde">
+                  🟢 1. Verde (82 BPM — Estável)
+                </button>
+                <button type="button" class="btn-sim" data-stage="amarela">
+                  🟡 2. Amarelo (96 BPM — Atenção)
+                </button>
+                <button type="button" class="btn-sim" data-stage="roxo">
+                  🟣 3. Roxo (114 BPM — Acelerado / LED Filho)
+                </button>
+                <button type="button" class="btn-sim" data-stage="vermelha">
+                  🔴 4. Vermelho (130 BPM — Alerta / Buzzer Mãe)
+                </button>
+              </div>
+
+              <div>
+                <strong style="color: #cbd5e1; font-size: 0.85rem; display:block; margin-bottom: 0.4rem;">
+                  Telemetria dos Sistemas Embarcados & Aplicativo/Site:
+                </strong>
+                <pre class="sim-log-card" id="simTerminalLog">[Sistema] Duas pulseiras inteligentes conectadas via BLE.
+[Status] Pulseira do Filho: Monitorando BPM | Pulseira da Mãe: LED RGB Verde (Estável).</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="publico">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag">Para Quem Criamos</span>
+          <h2 class="section-title">Público-Alvo & Beneficiários</h2>
+          <p class="section-subtitle">
+            O Projeto Ágape foca em quem mais precisa de suporte: pessoas com autismo grau 3 e os cuidadores que dedicam sua vida a elas.
+          </p>
+        </div>
+
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-icon" aria-hidden="true">👩‍👧</div>
+            <h3 class="audience-title">Pais, Mães & Cuidadores</h3>
+            <p class="audience-desc">
+              Responsáveis que enfrentam sobrecarga mental severa e precisam de apoio para conciliar a dedicação ao filho com trabalho e saúde mental.
+            </p>
+            <div class="audience-tags">
+              <span class="audience-tag">Paz Mental</span>
+              <span class="audience-tag">Familiares</span>
+              <span class="audience-tag">Menos Ansiedade</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon" style="background-color: #f3e8ff; color: var(--accent-purple);" aria-hidden="true">🧒</div>
+            <h3 class="audience-title">Autistas Grau 3</h3>
+            <p class="audience-desc">
+              Filhos totalmente dependentes que não conseguem verbalizar dores ou sobrecarga, protegidos por um dispositivo vestível e não invasivo.
+            </p>
+            <div class="audience-tags">
+              <span class="audience-tag">Grau 3</span>
+              <span class="audience-tag">Segurança</span>
+              <span class="audience-tag">Não Invasivo</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon" style="background-color: #fee2e2; color: var(--accent-red);" aria-hidden="true">💻</div>
+            <h3 class="audience-title">Cuidadores em Home-Office</h3>
+            <p class="audience-desc">
+              Cuidadores que trabalham em casa e necessitam de concentração em reuniões ou que transitam com os filhos em ruas e locais povoados.
+            </p>
+            <div class="audience-tags">
+              <span class="audience-tag">Home-Office</span>
+              <span class="audience-tag">Concentração</span>
+              <span class="audience-tag">Ambientes Povoados</span>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon" style="background-color: #ecfdf5; color: var(--accent-green);" aria-hidden="true">🩺</div>
+            <h3 class="audience-title">Profissionais de Saúde</h3>
+            <p class="audience-desc">
+              Profissionais de saúde que acessam o diário de comportamentos e compromissos registrados no app/site para acompanhar a evolução clínica.
+            </p>
+            <div class="audience-tags">
+              <span class="audience-tag">Registro</span>
+              <span class="audience-tag">Histórico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="funcionalidades">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag">Recursos em Ação</span>
+          <h2 class="section-title">Principais Funcionalidades</h2>
+          <p class="section-subtitle">
+            Conheça as ferramentas integradas entre as duas pulseiras inteligentes e o aplicativo/site do Projeto Ágape.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon-box icon-red" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h3 class="feature-title">Sensor Cardíaco no Filho</h3>
+            <p class="feature-desc">
+              Leitura contínua dos batimentos cardíacos diretamente no pulso do filho autista, identificando acelerações associadas a desconforto ou sobrecarga.
+            </p>
+            <div class="feature-bullets">
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sistemas embarcados não invasivos</span>
+              </div>
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>LED Azul que acende a partir do estado Roxo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-box icon-blue" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            </div>
+            <h3 class="feature-title">Alerta Remoto por LED RGB e Buzzer</h3>
+            <p class="feature-desc">
+              A pulseira do cuidador sinaliza instantaneamente com LED RGB (verde, amarelo, roxo e vermelho). Na cor vermelha, o buzzer apita para intervenção imediata.
+            </p>
+            <div class="feature-bullets">
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>4 cores com significado clínico claro</span>
+              </div>
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Buzzer sonoro ativo no alerta vermelho</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-box icon-yellow" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3 class="feature-title">Organização da Rotina & Agenda</h3>
+            <p class="feature-desc">
+              Estruturação visual dos compromissos diários (terapia ocupacional, fonoaudiologia, escola e horários de medicação), diminuindo o estresse e a imprevisibilidade.
+            </p>
+            <div class="feature-bullets">
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Previsibilidade essencial para o Grau 3</span>
+              </div>
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Controle de horários e compromissos</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-box icon-green" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 class="feature-title">Registro de Comportamentos</h3>
+            <p class="feature-desc">
+              Diário digital para o cuidador registrar observações sobre o comportamento do dia, gatilhos de desconforto e avanços nas atividades básicas de vida diária.
+            </p>
+            <div class="feature-bullets">
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Anotações com registro de data</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-box icon-purple" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+            </div>
+            <h3 class="feature-title">Suporte e Saúde Mental</h3>
+            <p class="feature-desc">
+              Reduz a ansiedade do cuidador em reuniões de home-office ou tarefas cotidianas, sabendo que será notificado sem precisar vigiar visualmente a cada instante.
+            </p>
+            <div class="feature-bullets">
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Tranquilidade para trabalhar em casa</span>
+              </div>
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Mais segurança na rua e locais públicos</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-box icon-cyan" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <h3 class="feature-title">Histórico de Ocorrências & Orientações</h3>
+            <p class="feature-desc">
+              Registro cronológico dos picos de frequência cardíaca e orientações sobre cuidados no autismo grau 3, fortalecendo a rede de apoio familiar.
+            </p>
+            <div class="feature-bullets">
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Relatórios de fácil consulta</span>
+              </div>
+              <div class="feature-bullet">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Informações acessíveis para a família</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="equipe">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag">Autores & Colaboradores</span>
+          <h2 class="section-title">Equipe do Projeto</h2>
+          <p class="section-subtitle">
+            Estudantes e orientadores responsáveis pela idealização, desenvolvimento mobile, hardware embarcado, backend e web do Projeto Ágape.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-avatar-box avatar-eduardo">
+              EH
+            </div>
+            <h3 class="team-name">Eduardo H.</h3>
+            <span class="team-role">Desenvolvedor Frontend & Mobile / IoT</span>
+            <p class="team-resp">
+              Responsável pelo desenvolvimento do aplicativo móvel React Native.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">React Native</span>
+              <span class="team-tag">Frontend Web</span>
+              <span class="team-tag">UX / UI</span>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar-box avatar-placeholder-1">
+              JV
+            </div>
+            <h3 class="team-name">João V.</h3>
+            <span class="team-role">Desenvolvedor IoT</span>
+            <p class="team-resp">
+              Responsável pela pesquisa de campo, entrevistas com cuidadores, integração BLE com sistemas embarcados das pulseiras.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">Pesquisa de Campo</span>
+              <span class="team-tag">IoT</span>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar-box avatar-placeholder-2">
+              KV
+            </div>
+            <h3 class="team-name">Kennay V.</h3>
+            <span class="team-role">Documentação e Refatoração dos códigos</span>
+            <p class="team-resp">
+              Responsável pela documentação e refatoração dos códigos do projeto.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">Documentação</span>
+              <span class="team-tag">Refatoração de código</span>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar-box avatar-placeholder-2">
+              PH
+            </div>
+            <h3 class="team-name">Pedro H.</h3>
+            <span class="team-role">Desenvolvedor Backend e Banco de Dados</span>
+            <p class="team-resp">
+              Responsável pela modelagem do banco de dados, requisitos do aplicativo/site, testes do sistema de alertas e documentação técnica.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">Backend</span>
+              <span class="team-tag">API Spring Boot</span>
+              <span class="team-tag">Banco de Dados MySQL</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tecnologias">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag">Stack Tecnológica</span>
+          <h2 class="section-title">Tecnologias Utilizadas</h2>
+          <p class="section-subtitle">
+            Tecnologias aplicadas no desenvolvimento do ecossistema de software e nos sistemas embarcados do projeto.
+          </p>
+        </div>
+
+        <div class="tech-category-group">
+          <h3 class="tech-category-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            Mobile & Frontend Web
+          </h3>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <div class="tech-icon-wrapper" aria-hidden="true">⚛️</div>
+              <div class="tech-info">
+                <span class="tech-name">React Native</span>
+                <span class="tech-scope">Aplicativo Mobile (Rotina & Alertas)</span>
+              </div>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrapper" aria-hidden="true">🚀</div>
+              <div class="tech-info">
+                <span class="tech-name">Expo Framework</span>
+                <span class="tech-scope">Build, Sensores & BLE</span>
+              </div>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrapper" aria-hidden="true">🌐</div>
+              <div class="tech-info">
+                <span class="tech-name">HTML5 Semântico</span>
+                <span class="tech-scope">Landing Page & Acessibilidade</span>
+              </div>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrapper" aria-hidden="true">🎨</div>
+              <div class="tech-info">
+                <span class="tech-name">CSS3 Moderno</span>
+                <span class="tech-scope">Design System & Responsividade</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-category-group">
+          <h3 class="tech-category-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            Sistemas Embarcados, Backend & Banco de Dados
+          </h3>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <div class="tech-icon-wrapper" aria-hidden="true">⚡</div>
+              <div class="tech-info">
+                <span class="tech-name">Sistemas Embarcados</span>
+                <span class="tech-scope">Sensor de Batimentos, LEDs e Buzzer</span>
+              </div>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrapper" aria-hidden="true">📡</div>
+              <div class="tech-info">
+                <span class="tech-name">Bluetooth BLE</span>
+                <span class="tech-scope">Comunicação sem Fio Dual</span>
+              </div>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrapper" aria-hidden="true">☕</div>
+              <div class="tech-info">
+                <span class="tech-name">Java 22 & Spring Boot 3</span>
+                <span class="tech-scope">API REST</span>
+              </div>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrapper" aria-hidden="true">🐬</div>
+              <div class="tech-info">
+                <span class="tech-name">MySQL</span>
+                <span class="tech-scope">Banco de Dados Relacional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contato">
+      <div class="container cta-container">
+        <h2 class="cta-title">Venha fazer parte da transformação no apoio a famílias no Autismo Grau 3</h2>
+        <p class="cta-subtitle">
+          O Projeto Ágape une sistemas embarcados, desenvolvimento web/mobile e compromisso social para levar tranquilidade a cuidadores e familiares.
+        </p>
+
+        <div class="cta-actions">
+          <button type="button" class="btn btn-cta" data-open-modal="contact">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Entrar em Contato com a Equipe
+          </button>
+          <a href="#hero" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.4);">
+            Voltar ao Início
+          </a>
+        </div>
+
+        <div class="cta-extra-info">
+          <div class="cta-extra-item">
+            <span>🎓</span> Disciplina de Programação Web III (PWIII)
+          </div>
+          <div class="cta-extra-item">
+            <span>🛡️</span> Foco em Segurança e Qualidade de Vida
+          </div>
+          <div class="cta-extra-item">
+            <span>🌐</span> Pronto para GitHub Pages
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <!-- img src="img/logo.png" alt="Logotipo do Projeto Ágape" class="footer-logo" -->
+          <p class="footer-desc">
+            Projeto Ágape — Sistema composto por duas pulseiras inteligentes (filho e responsável) e aplicativo/site de rotina, auxiliando famílias de pessoas autistas de grau 3 com segurança, tranquilidade e organização.
+          </p>
+          <small style="color: #64748b;">Trabalho Acadêmico de Conclusão de Curso / PWIII</small>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Início</a></li>
+            <li><a href="#sobre" class="footer-link">Sobre o Projeto</a></li>
+            <li><a href="#problema" class="footer-link">O Problema</a></li>
+            <li><a href="#solucao" class="footer-link">Nossa Solução</a></li>
+            <li><a href="#simulador" class="footer-link">Simulador Dual</a></li>
+            <li><a href="#publico" class="footer-link">Público-Alvo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Recursos</h4>
+          <ul class="footer-links">
+            <li><a href="#funcionalidades" class="footer-link">Pulseira do Filho (BPM)</a></li>
+            <li><a href="#funcionalidades" class="footer-link">Pulseira da Mãe (LED/Buzzer)</a></li>
+            <li><a href="#funcionalidades" class="footer-link">Alertas em 4 Estágios</a></li>
+            <li><a href="#funcionalidades" class="footer-link">Organização da Rotina</a></li>
+            <li><a href="#funcionalidades" class="footer-link">Registro de Comportamentos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Projeto Acadêmico</h4>
+          <ul class="footer-links">
+            <li><a href="#equipe" class="footer-link">Equipe de Desenvolvimento</a></li>
+            <li><a href="#tecnologias" class="footer-link">Stack Tecnológica</a></li>
+            <li><span class="footer-link" style="color: #cbd5e1;">Disciplina: PWIII</span></li>
+            <li><a href="https://USUARIO.github.io/" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub Pages (Futuro Link)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Projeto Ágape. Todos os direitos reservados.</p>
+        <p>Desenvolvido com foco no acolhimento de famílias de pessoas autistas de grau 3.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Fechar janela de contato">&times;</button>
+      
+      <h3 class="modal-title" id="modalTitle">Fale com a Equipe Ágape</h3>
+      <p class="modal-subtitle">Envie sua mensagem, dúvida acadêmica ou feedback sobre o projeto.</p>
+
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="contactName" class="form-label">Nome Completo</label>
+          <input type="text" id="contactName" class="form-input" placeholder="Seu nome ou instituição" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contactEmail" class="form-label">E-mail para Retorno</label>
+          <input type="email" id="contactEmail" class="form-input" placeholder="seuemail@exemplo.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contactCategory" class="form-label">Você é:</label>
+          <select id="contactCategory" class="form-input" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="familiar">Familiar / Cuidador de pessoa autista grau 3</option>
+            <option value="familiar">Familiar / Responsável</option>
+            <option value="terapeuta">Terapeuta / Profissional de Saúde</option>
+            <option value="educador">Educador / Escola</option>
+            <option value="estudante">Estudante / Professor de TI</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contactMessage" class="form-label">Mensagem</label>
+          <textarea id="contactMessage" class="form-textarea" placeholder="Descreva sua dúvida ou sugestão..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Enviar Mensagem
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
