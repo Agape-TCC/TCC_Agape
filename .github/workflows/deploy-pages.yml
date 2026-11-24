@@ -20,15 +20,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload Landing Page
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: './landing-page'
+          path: './landing-page' # Confirme se o nome da pasta no GitHub é exatamente esse
 
       - name: Deploy to GitHub Pages
         id: deployment
